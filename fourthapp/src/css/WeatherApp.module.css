@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.searchHeader {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchHeader input {
+  width: 400px;
+  height: 50px;
+  color: black;
+  font-size: 18px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.searchHeader button {
+  height: 55px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: brown;
+  color: white;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  transition-timing-function: ease-in-out;
+}
+
+.searchHeader button:hover {
+  background-color: rgb(123, 32, 32);
+  box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.401);
+}
+
+/* -------------------------------------------------------------- */
+
+.resultSection {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.searchResult {
+  /* border: 2px solid red; */
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.401);
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardTop {
+  /* border: 2px solid red; */
+  width: 93%;
+  height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardTop .cityDetails {
+  /* border: 2px solid blue; */
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 3px;
+}
+
+.cardTop .cityDetails h1 {
+  font-size: 32px;
+  color: black;
+}
+
+.cardTop .cityDetails h6 {
+  font-size: 18px;
+  color: black;
+}
+
+.cardTop .cityDetails p {
+  font-size: 14px;
+  color: rgb(68, 68, 68);
+}
+
+.cardTop .weatherDetails {
+  /* border: 2px solid red; */
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: start;
+  gap: 3px;
+}
+
+.cardTop .weatherDetails h2 {
+  font-size: 32px;
+}
+
+.cardTop .weatherDetails h4 {
+  font-size: 18px;
+}
+
+.cardTop .weatherDetails p {
+  font-size: 14px;
+  color: rgb(68, 68, 68);
+}
+
+.cardBottom {
+  /* border: 2px solid blue; */
+  border-top: 1px solid rgb(68, 68, 68);
+  width: 93%;
+  height: 20%;
+}
+
+.cardBottom p {
+  padding-top: 10px;
+  font-size: 16px;
+  color: rgb(68, 68, 68);
+}
