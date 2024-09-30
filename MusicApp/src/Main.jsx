@@ -5,6 +5,7 @@ import { FaPlay } from "react-icons/fa";
 import { FaPause } from "react-icons/fa6";
 import { FaForwardStep } from "react-icons/fa6";
 import { FaBackwardStep } from "react-icons/fa6";
+import { MdOutlineRestartAlt } from "react-icons/md";
 import { MdOutlineLoop } from "react-icons/md";
 
 function Main() {
@@ -46,6 +47,15 @@ function Main() {
         setPlay(true);
       }
     }, 0);
+  };
+
+  let restartSong = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0; // Restart the song
+      if (play) {
+        audioRef.current.play(); // Play the song if it was already playing
+      }
+    }
   };
 
   let skipForwardPlayHandler = (direction) => {
@@ -96,7 +106,10 @@ function Main() {
           </div>
 
           <div className="controls">
-            <button onClick={() => skipForwardPlayHandler("skip-backward")}>
+            <button onClick={restartSong}>
+              <MdOutlineRestartAlt className="buttonStyles" />
+            </button>
+            <button onClick={() => skipForwardPlayHandler("skip-backward")}>s
               <FaBackwardStep className="buttonStyles" />
             </button>
             <button onClick={playOrPause}>
