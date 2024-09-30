@@ -54,11 +54,15 @@ function WeatherApp() {
               <div className={WeatherCss.weatherDetails}>
                 <h2>{weatherInfo.main.temp}°C</h2>
                 <h4>{weatherInfo.weather[0].description}</h4>
-                <p>
-                  <FaTemperatureArrowDown /> : {weatherInfo.main.temp_min}°C{" "}
+                <div>
+                  <div className={WeatherCss.coldTemp}>
+                    <FaTemperatureArrowDown /> : {weatherInfo.main.temp_min}°C{" "}
+                  </div>
                   &nbsp; <span /> | &nbsp;
-                  <FaTemperatureArrowUp /> : {weatherInfo.main.temp_max}°C
-                </p>
+                  <div className={WeatherCss.hotTemp}>
+                    <FaTemperatureArrowUp /> : {weatherInfo.main.temp_max}°C
+                  </div>
+                </div>
               </div>
             </div>
             <div className={WeatherCss.cardBottom}>

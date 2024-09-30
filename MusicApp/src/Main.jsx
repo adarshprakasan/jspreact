@@ -109,7 +109,7 @@ function Main() {
             <button onClick={restartSong}>
               <MdOutlineRestartAlt className="buttonStyles" />
             </button>
-            <button onClick={() => skipForwardPlayHandler("skip-backward")}>s
+            <button onClick={() => skipForwardPlayHandler("skip-backward")}>
               <FaBackwardStep className="buttonStyles" />
             </button>
             <button onClick={playOrPause}>

@@ -121,9 +121,20 @@
   font-size: 18px;
 }
 
-.cardTop .weatherDetails p {
+.cardTop .weatherDetails div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coldTemp {
   font-size: 14px;
-  color: rgb(68, 68, 68);
+  color: blue;
+}
+
+.hotTemp {
+  font-size: 14px;
+  color: red;
 }
 
 .cardBottom {
