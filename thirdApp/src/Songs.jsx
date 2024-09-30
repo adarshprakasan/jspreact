@@ -24,51 +24,61 @@ let songs = [
     cover: EightLettersCover,
     title: "8 Letter",
     src: EightLetter,
+    singer: "Why Don't We",
   },
   {
     cover: DandelionsCover,
     title: "Dandelions",
     src: Dandelions,
+    singer: "Ruth B",
   },
   {
     cover: DespacitoCover,
     title: "Despacito",
     src: Despacito,
+    singer: "Luis Fonsi, Daddy Yankee",
   },
   {
     cover: DynamiteCover,
     title: "Dynamite",
     src: Dynamite,
+    singer: "BTS",
   },
   {
     cover: LnrCover,
     title: "Left and Right",
     src: LeftnRight,
+    singer: "Charlie Puth, Jung Kook, BTS",
   },
   {
     cover: MakeItRightCover,
     title: "Make it Right",
     src: MakeItRight,
+    singer: "BTS, Lauv",
   },
   {
     cover: MoneyCover,
     title: "Money",
     src: Money,
+    singer: "Lisa",
   },
   {
     cover: MyUniCover,
     title: "My Universe",
     src: MyUniverse,
+    singer: "Coldplay, BTS",
   },
   {
     cover: SenoritaCover,
     title: "Señorita",
     src: Senorita,
+    singer: "Shawn Mendes, Camila Cabello",
   },
   {
     cover: ShapeOfYouCover,
     title: "Shape of You",
     src: ShapeOfYou,
+    singer: "Ed Sheeran",
   },
 ];
 
