@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./todolist.css";
 import { MdDelete } from "react-icons/md";
-import { useState } from "react";
 
 function ToDoList() {
   let [item, setItem] = useState("");
