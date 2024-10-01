@@ -51,9 +51,9 @@ function Main() {
 
   let restartSong = () => {
     if (audioRef.current) {
-      audioRef.current.currentTime = 0; // Restart the song
+      audioRef.current.currentTime = 0;
       if (play) {
-        audioRef.current.play(); // Play the song if it was already playing
+        audioRef.current.play();
       }
     }
   };
