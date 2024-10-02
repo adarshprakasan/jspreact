@@ -24,6 +24,18 @@ function ToDoList() {
     setList(updatedList);
   };
 
+  //   let deleteItem = (index) => {
+  //     let updatedList = new Array(list.length - 1);
+  //     let j = 0;
+  //     for (let i = 0; i < list.length; i++) {
+  //       if (i !== index) {
+  //         updatedList[j] = list[i];
+  //         j++;
+  //       }
+  //     }
+  //     setList(updateList);
+  //   };
+
   return (
     <div className="mainBody">
       <div className="inputHeader">
