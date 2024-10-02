@@ -1,40 +1,45 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./todolist.css";
 import { MdDelete } from "react-icons/md";
+import { MdEdit } from "react-icons/md";
 
 function ToDoList() {
   let [item, setItem] = useState("");
   let [list, setList] = useState([]);
+  let [toggle, setToggle] = useState({ show: false, id: "" });
+  let editRef = useRef(null);
 
-  let updateItem = ({ target: { value } }) => {
+  let addItem = ({ target: { value } }) => {
     setItem(value);
   };
 
   let updateList = () => {
     setList([...list, item]);
+    setItem("");
   };
 
-  let deleteItem = (index) => {
-    let updatedList = [];
-    for (let i = 0; i < list.length; i++) {
-      if (i !== index) {
-        updatedList.push(list[i]);
-      }
-    }
-    setList(updatedList);
+  let deleteItem = (id) => {
+    let updateList = list.filter((_, index) => id !== index);
+    setList(updateList);
+    setItem("");
   };
 
-  //   let deleteItem = (index) => {
-  //     let updatedList = new Array(list.length - 1);
-  //     let j = 0;
-  //     for (let i = 0; i < list.length; i++) {
-  //       if (i !== index) {
-  //         updatedList[j] = list[i];
-  //         j++;
-  //       }
-  //     }
-  //     setList(updateList);
-  //   };
+  let editItem = (id) => {
+    editRef.current.focus();
+    setToggle({ show: true, id });
+    setItem(list[id]);
+  };
+
+  let updateItem = () => {
+    list[toggle.id] = item;
+    setList([...list]);
+    setItem("");
+    setToggle({ show: false });
+  };
+
+  let clearAll = () => {
+    setList([]);
+  };
 
   return (
     <div className="mainBody">
@@ -43,30 +48,53 @@ function ToDoList() {
           <input
             type="text"
             placeholder="Add your Item"
-            onChange={updateItem}
+            onChange={addItem}
+            ref={editRef}
+            value={item}
           />
-          <button onClick={updateList}>+ Add</button>
+          {toggle.show ? (
+            <button onClick={updateItem}>Update</button>
+          ) : (
+            <button onClick={updateList}>+ Add</button>
+          )}
         </div>
       </div>
       <div className="listBody">
         <div className="listSection">
-          <ol>
-            {list.map((i, index) => {
-              return (
-                <div key={index} className="listStyle">
-                  <li>{i}</li>
-                  <button
-                    className="deleteButton"
-                    onClick={() => {
-                      deleteItem(index);
-                    }}
-                  >
-                    <MdDelete />
-                  </button>
-                </div>
-              );
-            })}
-          </ol>
+          {list.length !== 0 ? (
+            <div className="listContainer">
+              <ol>
+                {list.map((i, index) => {
+                  return (
+                    <div key={index} className="listStyle">
+                      <li>{i}</li>
+                      <div className="optionButtons">
+                        <button
+                          className="optionButton"
+                          onClick={() => {
+                            editItem(index);
+                          }}
+                        >
+                          <MdEdit />
+                        </button>
+                        <button
+                          className="optionButton"
+                          onClick={() => {
+                            deleteItem(index);
+                          }}
+                        >
+                          <MdDelete />
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </ol>
+              <button onClick={clearAll}>Clear All</button>
+            </div>
+          ) : (
+            <h5>Your To-Do list is Empty</h5>
+          )}
         </div>
       </div>
     </div>
