@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(236, 236, 236);
+  color: rgb(23, 23, 23);
+}
+
+.pdSection {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pdCard {
+  /* border: 2px solid red; */
+  border-radius: 10px;
+  width: 55%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: rgb(255, 255, 255);
+}
+
+.pdImage {
+  /* border: 1px solid blue; */
+  width: 40%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pdImage img {
+  transition: all ease 0.5s;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.pdImage:hover img {
+  max-width: 105%;
+  max-height: 105%;
+}
+
+.pdDetails {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.pdDetail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pdDetails h4 {
+  font-size: 32px;
+}
+
+.pdDetails h6 {
+  font-size: 32px;
+  color: rgb(255, 163, 49);
+}

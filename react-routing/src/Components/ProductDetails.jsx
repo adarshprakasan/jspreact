@@ -1,43 +1,27 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
+import ApiData from "./ApiData";
+import "../css/productdetails.css";
 
 function ProductDetails() {
   let { pid } = useParams();
   pid = Number(pid);
 
-  let [fetchedData, setFetchedData] = useState([]);
-  async function dataFetch() {
-    try {
-      let { data } = await axios.get(
-        `https://fakestoreapi.com/products/${pid}`
-      );
-      console.log(data);
-      setFetchedData(data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  useEffect(() => {
-    dataFetch();
-  }, []);
+  let fetchedData = ApiData(`https://fakestoreapi.com/products/${pid}`);
 
   return (
-    <div>
-      <div className="productSection">
-        <div className="productList">
-          <div className="productCard" key={fetchedData.id}>
-            <div className="productImage">
-              <img src={fetchedData.image} alt="" />
-            </div>
-            <div className="productDetails">
-              <h4>{fetchedData.title}</h4>
-              <h5>{fetchedData.description}</h5>
-              <h5>$ {fetchedData.price}</h5>
-            </div>
+    <div className="pdSection">
+      <div className="pdCard" key={fetchedData.id}>
+        <div className="pdImage">
+          <img src={fetchedData.image} alt="" />
+        </div>
+        <div className="pdDetails">
+          <div className="pdDetail">
+            <h4>{fetchedData.title}</h4>
+            <hr />
+            <h5>{fetchedData.description}</h5>
           </div>
-          ;
+          <h6>$ {fetchedData.price}</h6>
         </div>
       </div>
     </div>
@@ -45,3 +29,6 @@ function ProductDetails() {
 }
 
 export default ProductDetails;
+
+// icici emi calculator
+// react charts

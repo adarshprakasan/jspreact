@@ -1,0 +1,72 @@
+.formSection {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 500px;
+  /* height: 300px; */
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.ipFields {
+  /* border: 2px solid blue; */
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+}
+
+.ipField {
+  /* border: 2px solid red; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ipField input {
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.ipField input:focus {
+  border: 2px solid rgb(255, 163, 49);
+}
+
+.form button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: black;
+  outline: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.form button:hover {
+  color: black;
+  background-color: rgb(255, 163, 49);
+}
+
+.ipError {
+  color: red;
+}

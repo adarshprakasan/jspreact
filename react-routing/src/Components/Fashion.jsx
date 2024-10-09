@@ -1,22 +1,10 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../css/fashion.css";
+import ApiData from "./ApiData";
 
 function Fashion() {
-  let [fetchedData, setFetchedData] = useState([]);
-  async function dataFetch() {
-    try {
-      let { data } = await axios.get(`https://fakestoreapi.com/products`);
-      setFetchedData(data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  useEffect(() => {
-    dataFetch();
-  }, []);
+  let fetchedData = ApiData(`https://fakestoreapi.com/products`);
 
   return (
     <div className="productSection">
