@@ -1,0 +1,52 @@
+.LoanAmountRangesection {
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.loanamntrange {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.money {
+  display: flex;
+  gap: 10px;
+}
+
+.LoanAmountRangebutton {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 19px;
+}
+
+.LoanAmountRangebut {
+  color: rgb(15, 13, 13);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.LoanAmountRangebut input {
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  width: 80%;
+  height: 2px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.LoanAmountvalue {
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  height: 30px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 10px;
+}

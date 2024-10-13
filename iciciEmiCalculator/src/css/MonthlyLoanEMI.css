@@ -1,0 +1,82 @@
+.section {
+  /* border: 2px solid blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff6f0;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.monthlyLoan {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.monthlyLoanFirstbox {
+  /* border: 2px solid black; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Total {
+  /* border: 2px solid red; */
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.pi {
+  /* border: 2px solid blue; */
+  height: 250px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Monthlyemi {
+  /* border: 2px solid red; */
+  width: 80%;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffd178;
+  color: #074a86;
+}
+
+.Apply {
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  background-color: orangered;
+  height: 50px;
+  width: 40%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.Apply:hover {
+  color: orangered;
+  background-color: white;
+  border: 1px solid orangered;
+}

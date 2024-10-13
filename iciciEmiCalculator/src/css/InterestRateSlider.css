@@ -1,0 +1,25 @@
+.interest-rate-slider {
+  /* border: 2px solid red; */
+  height: 100px;
+  color: rgb(15, 13, 13);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.InterestRateSlider {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.interest-rate-slider input {
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  width: 80%;
+  height: 2px;
+  background: #665b5b;
+  outline: none;
+  border-radius: 5px;
+}
