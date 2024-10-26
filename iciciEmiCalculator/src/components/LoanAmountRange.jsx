@@ -53,7 +53,7 @@ function LoanAmountRange({ loanAmount, setLoanAmount }) {
           checked={range === 1}
           onChange={(e) => handleRangeChange(parseInt(e.target.value))}
         />
-        <label>0 - 1 Crore</label>
+        <label>0-1 Crore</label>
         <input
           type="radio"
           name="loan-range"
@@ -61,7 +61,7 @@ function LoanAmountRange({ loanAmount, setLoanAmount }) {
           checked={range === 2}
           onChange={(e) => handleRangeChange(parseInt(e.target.value))}
         />
-        <label>1 Crore -5 Crore</label>
+        <label>1 Crore-5 Crore</label>
         <input
           type="radio"
           name="loan-range"
@@ -69,7 +69,7 @@ function LoanAmountRange({ loanAmount, setLoanAmount }) {
           checked={range === 3}
           onChange={(e) => handleRangeChange(parseInt(e.target.value))}
         />
-        <label>5 Crore - 30 Crore</label>
+        <label>5 Crore-30 Crore</label>
       </div>
       <div className="LoanAmountRangebutton">
         <p>Loan Amount</p>

@@ -10,7 +10,6 @@ function WeatherApp() {
   let fetchApi = async () => {
     let apiKey = "b710e1b242363cc766f242a320cf5365";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    // let apiUrl = `https://google.com`;
 
     try {
       let data = await fetch(apiUrl);
