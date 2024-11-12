@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.mainBody {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+}
+
+.inputHeader {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid rgb(35, 35, 35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  background-color: rgb(235, 235, 235);
+}
+
+.inputSection {
+  width: 500px;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.listBody {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  background-color: rgb(235, 235, 235);
+}
+
+.listSection {
+  width: 500px;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.listSection h5 {
+  color: rgb(35, 35, 35);
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.listContainer {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.listStyle {
+  border-radius: 5px;
+  border: 2px solid rgb(35, 35, 35);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  color: rgb(35, 35, 35);
+  margin-bottom: 5px;
+}
+
+.optionButtons {
+  margin-right: 20px;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+}
+
+.optionButtons .optionButton {
+  visibility: hidden;
+  background-color: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(35, 35, 35);
+  background: none;
+  cursor: pointer;
+}
+
+.optionButtons .optionButton:hover {
+  color: #93007f;
+}
+
+.listStyle:hover .optionButton {
+  visibility: visible;
+  background-color: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  cursor: pointer;
+}
+
+#outlined-basic:focus {
+  color: #93007f;
+}

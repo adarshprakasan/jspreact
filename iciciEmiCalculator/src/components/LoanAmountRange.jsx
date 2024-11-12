@@ -73,7 +73,15 @@ function LoanAmountRange({ loanAmount, setLoanAmount }) {
       </div>
       <div className="LoanAmountRangebutton">
         <p>Loan Amount</p>
-        <p className="LoanAmountvalue"> ₹{loanAmount}</p>
+        {/* <p className="LoanAmountvalue"> ₹{loanAmount}</p> */}
+        <input
+          type="number"
+          className="LoanAmountvalue"
+          value={loanAmount}
+          onChange={(e) => {
+            handleLoanAmountChange(parseInt(e.target.value));
+          }}
+        />
         <div className="LoanAmountRangebut">
           <input
             type="range"

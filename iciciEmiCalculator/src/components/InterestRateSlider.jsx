@@ -9,15 +9,37 @@ function InterestRateSlider({ interestRate, setInterestRate }) {
           Illustrative&nbsp;
           <span style={{ color: "orangered" }}>Interest Rate</span>&nbsp;p.a.
         </p>
-        <p className="LoanAmountvalue">₹{interestRate}</p>
+        {/* <p className="LoanAmountvalue">₹{interestRate}</p> */}
+        {/* <input
+          type="number"
+          className="LoanAmountvalue"
+          value={interestRate}
+          onChange={(e) => {
+            setInterestRate(parseInt(e.target.value));
+          }}
+        /> */}
+        <div className="LoanAmountvalue">
+          <input
+            className="yearInp"
+            type="number"
+            value={interestRate}
+            onChange={(e) => {
+              setInterestRate(parseInt(e.target.value));
+            }}
+            min="1"
+          />
+          <span>{`%`}</span>
+        </div>
       </div>
-      <input
-        type="range"
-        min="1"
-        max="20"
-        value={interestRate}
-        onChange={(e) => setInterestRate(parseFloat(e.target.value))}
-      />
+      <div className="LoanAmountRangebut">
+        <input
+          type="range"
+          min="1"
+          max="20"
+          value={interestRate}
+          onChange={(e) => setInterestRate(parseFloat(e.target.value))}
+        />
+      </div>
     </div>
   );
 }

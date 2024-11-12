@@ -13,10 +13,16 @@ let LoanCalculator = () => {
 
   useEffect(() => {
     let r = interestRate / 12 / 100;
-    let n = tenure * 12;
+    let n;
+    if (tenure === 0) {
+      n = tenure + 1 * 12;
+    } else {
+      n = tenure * 12;
+    }
     let emi = (loanAmount * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
     setMonthlyEMI(emi);
   }, [loanAmount, interestRate, tenure]);
+  
   let emi = Math.ceil(monthlyEMI);
 
   return (
