@@ -60,14 +60,36 @@ function ToDoList() {
             onChange={addItem}
             ref={editRef}
             value={item}
-            sx={{ width: "100%", maxWidth: 280 }}
+            sx={{
+              width: "100%",
+              maxWidth: 280,
+              "& .MuiOutlinedInput-root": {
+                borderRadius: "10px",
+                "&:hover fieldset": {
+                  borderColor: "#a79d9b",
+                },
+                "&.Mui-focused fieldset": {
+                  borderColor: "#625c5b",
+                },
+              },
+              "& .MuiInputLabel-root.Mui-focused": {
+                color: "#625c5b",
+              },
+            }}
           />
           {toggle.show ? (
             <Button
               variant="contained"
               onClick={updateItem}
               disabled={item.trim() === ""}
-              sx={{ height: "55px", backgroundColor: "#93007f" }}
+              sx={{
+                height: "55px",
+                backgroundColor: "#a79d9b",
+                borderRadius: "10px",
+                "&:hover": {
+                  backgroundColor: "#625c5b",
+                },
+              }}
             >
               Update
             </Button>
@@ -76,7 +98,14 @@ function ToDoList() {
               variant="contained"
               onClick={updateList}
               disabled={item.trim() === ""}
-              sx={{ height: "55px", backgroundColor: "#93007f" }}
+              sx={{
+                height: "55px",
+                backgroundColor: "#a79d9b",
+                borderRadius: "10px",
+                "&:hover": {
+                  backgroundColor: "#625c5b",
+                },
+              }}
             >
               + Add
             </Button>
@@ -128,7 +157,14 @@ function ToDoList() {
               <Button
                 variant="contained"
                 onClick={clearAll}
-                sx={{ backgroundColor: "#93007f" }}
+                sx={{
+                  height: "55px",
+                  backgroundColor: "#a79d9b",
+                  borderRadius: "10px",
+                  "&:hover": {
+                    backgroundColor: "#625c5b",
+                  },
+                }}
               >
                 Clear All
               </Button>

@@ -35,6 +35,11 @@
 }
 
 .listBody {
+  background-image: url("https://images.unsplash.com/photo-1644329843491-99edfc83de04?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRvJTIwZG8lMjBsaXN0fGVufDB8fDB8fHww");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -105,7 +110,7 @@
 }
 
 .optionButtons .optionButton:hover {
-  color: #93007f;
+  color: #625c5b;
 }
 
 .listStyle:hover .optionButton {
@@ -117,8 +122,4 @@
   justify-content: center;
   background: none;
   cursor: pointer;
-}
-
-#outlined-basic:focus {
-  color: #93007f;
 }
